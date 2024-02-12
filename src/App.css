@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.title{
+  padding: 2rem 0 2rem 5rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.slideshow{
+  padding: 2rem 5rem 2rem 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #7d7d7d;
 }
 
-.App-link {
-  color: #61dafb;
+.slideshow:hover{
+  color: black;
+}
+hr{
+  background-color: lightgray;
+  border: none;
+  height: 1px;
+  margin: 0 4.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  max-width: 20rem;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.masonry{
+  columns: 4;
+  padding: 2.3rem;
+}
+
+.masonry > *{
+  margin-bottom: 2.5rem;
+  break-inside: avoid;
 }
