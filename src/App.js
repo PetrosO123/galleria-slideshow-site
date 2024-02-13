@@ -5,12 +5,11 @@ import data from "./data.json";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 function App() {
   let navigate = useNavigate();
   const [entered, setEntered] = useState(null);
   const handleClick = () => {
-    navigate("/");
+    navigate("/galleria-slideshow-site");
   };
   const handleSlideshow = () => {
     setEntered(0);
@@ -21,7 +20,7 @@ function App() {
       <header>
         <img
           className="title"
-          src={"./assets/shared/logo.svg"}
+          src={`${process.env.PUBLIC_URL}/${`assets/shared/logo.svg`}`}
           alt="galleria logo"
           onClick={handleClick}
         />
@@ -32,7 +31,7 @@ function App() {
       <hr />
       <Routes>
         <Route
-          path="/"
+          path="/galleria-slideshow-site"
           element={
             <Masonry entered={entered} setEntered={setEntered} data={data} />
           }

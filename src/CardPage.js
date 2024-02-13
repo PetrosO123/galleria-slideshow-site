@@ -20,7 +20,10 @@ function CardPage({ data, entered, setEntered }) {
       <div className="midsection">
         <div className="pageLeft">
           <div className="art">
-            <img src={data[entered].images.hero.large} alt="arnolfini" />
+            <img
+              src={`${process.env.PUBLIC_URL}/${data[entered].images.hero.large}`}
+              alt="arnolfini"
+            />
           </div>
 
           <div className="work-artist">
@@ -29,7 +32,7 @@ function CardPage({ data, entered, setEntered }) {
           </div>
           <div className="artist">
             <img
-              src={data[entered].artist.image}
+              src={`${process.env.PUBLIC_URL}/${data[entered].artist.image}`}
               alt={data[entered].artist.name}
             />
           </div>
@@ -49,12 +52,16 @@ function CardPage({ data, entered, setEntered }) {
         </div>
         <div className="navigation">
           <img
-            src="./assets/shared/icon-back-button.svg"
+            src={`${
+              process.env.PUBLIC_URL
+            }/${`assets/shared/icon-back-button.svg`}`}
             alt="left arrow"
             onClick={handlePrev}
           />
           <img
-            src="./assets/shared/icon-next-button.svg"
+            src={`${
+              process.env.PUBLIC_URL
+            }/${`assets/shared/icon-next-button.svg`}`}
             alt="right arrow"
             onClick={handleNext}
           />

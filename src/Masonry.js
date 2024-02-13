@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Masonry({ entered, setEntered, data }) {
+  console.log("data: ", data);
   let navigate = useNavigate();
   const handleEnter = (i) => {
     setEntered(i);
@@ -26,7 +27,10 @@ function Masonry({ entered, setEntered, data }) {
             onMouseLeave={handleLeave}
             onClick={handleClick}
           >
-            <img src={obj.images.gallery} alt={obj.description}></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/${obj.images.gallery}`}
+              alt={obj.description}
+            ></img>
             {entered === i ? (
               <div className="cardDetails">
                 <div className="cardName">{obj.name}</div>
