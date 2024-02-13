@@ -91,10 +91,11 @@ footer{
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 48.5rem
 }
 .artDescription{
    max-width: 28rem;
-   font-size: 1rem;
+   font-size: 1.2rem;
    font-weight: 550;
    line-height: 1.75rem;
    color: #7D7D7D;
