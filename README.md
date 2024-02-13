@@ -3,7 +3,7 @@
 Welcome to the Galleria Slideshow Site, a visually captivating slideshow-style photo gallery designed to showcase a curated collection of images in an elegant, responsive layout. This project is perfect for photographers, artists, designers, and anyone looking to present their work in an attractive online format. Hosted with Vercel, the project ensures fast loading times and a seamless user experience.
 
 ### Live Demo
-Check out the live demo here: [Galleria Slideshow Site](https://vercel.com/petros-projects-f6c50354/galleria-slideshow-site](https://galleria-slideshow-site-petros-seven.vercel.app/)
+Check out the live demo here: [Galleria Slideshow Site](https://galleria-slideshow-site-petros-seven.vercel.app/)
 
 ### Features
 - **Slideshow Presentation:** Images are presented in a slideshow format, allowing users to view each photograph individually and appreciate the details.
