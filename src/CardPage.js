@@ -1,6 +1,20 @@
 import "./CardPage.css";
 
 function CardPage({ data, entered, setEntered }) {
+  const handleNext = () => {
+    if (entered === data.length - 1) {
+      setEntered(0);
+      return;
+    }
+    setEntered(entered + 1);
+  };
+  const handlePrev = () => {
+    if (entered === 0) {
+      setEntered(data.length - 1);
+      return;
+    }
+    setEntered(entered - 1);
+  };
   return (
     <div className="wrapper-cardPage">
       <div className="midsection">
@@ -10,12 +24,8 @@ function CardPage({ data, entered, setEntered }) {
           </div>
 
           <div className="work-artist">
-            <div className="work-artist-wrapper">
-              <div className="cardPageTitle">{data[entered].name}</div>
-              <div className="cardPageSubtitle">
-                {data[entered].artist.name}
-              </div>
-            </div>
+            <div className="cardPageTitle">{data[entered].name}</div>
+            <div className="cardPageSubtitle">{data[entered].artist.name}</div>
           </div>
           <div className="artist">
             <img
@@ -38,8 +48,16 @@ function CardPage({ data, entered, setEntered }) {
           </div>
         </div>
         <div className="navigation">
-          <img src="./assets/shared/icon-back-button.svg" alt="left arrow" />
-          <img src="./assets/shared/icon-next-button.svg" alt="right arrow" />
+          <img
+            src="./assets/shared/icon-back-button.svg"
+            alt="left arrow"
+            onClick={handlePrev}
+          />
+          <img
+            src="./assets/shared/icon-next-button.svg"
+            alt="right arrow"
+            onClick={handleNext}
+          />
         </div>
       </footer>
     </div>

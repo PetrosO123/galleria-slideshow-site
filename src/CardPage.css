@@ -4,7 +4,6 @@ flex-direction: column;
 padding-top: 1rem;
 }
 .midsection{
-    border: 2px solid black;
     margin: 0 auto;
     width: 100%;
     height: 38rem;
@@ -36,13 +35,15 @@ footer{
 }
 
 .pageLeft,.pageRight{
-    width: 46rem;
-    border: 2px solid black;
+    width: 46.5rem;
     height: 100%;
 }
+
 .art img{
     width: 100%;
     height: 100%;
+    /* position: absolute; */
+    /* z-index: -1; */
 }
 .pageLeft{
     display: flex;
@@ -54,14 +55,19 @@ footer{
 .cardPageTitle{
     font-size: 3.5rem;
     font-weight: 700;
-    border: 2px solid yellow;
+    background-color: white;
+    margin-bottom: 0.5rem;
+    text-align: end;
+    padding-left: 0.5rem;
 }
 .cardPageSubtitle{
     text-align: end;
+    font-size: 1rem;
+    color: #7d7d7d
 }
 .work-artist{
-    width: 16rem;
-    height: 15rem;
+    max-width: 18rem;
+    min-height: 12rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -70,10 +76,6 @@ footer{
     display: flex;
     flex-direction: column;
 
-}
-.cardPageTitle{
-    margin-bottom: 1rem;
-    text-align: end;
 }
 .artist img{
     width: 8rem;
@@ -91,8 +93,8 @@ footer{
     position: relative;
 }
 .artDescription{
-   max-width: 22rem;
-   font-size: 0.875rem;
+   max-width: 28rem;
+   font-size: 1rem;
    font-weight: 550;
    line-height: 1.75rem;
    color: #7D7D7D;
@@ -110,7 +112,7 @@ footer{
 .footer-cardPageTitle{
     font-size: 1.125rem;
     font-weight: 700;
-    
+    margin-bottom: 0.5rem;
 }
 .footer-cardPageSubtitle{
     color: #7D7D7D;
@@ -121,6 +123,9 @@ footer{
     display: flex;
     gap: 2.56rem;
     padding-right: 2.5rem;
+}
+.navigation>*{
+    cursor: pointer;
 }
 .navigation img{
     width: 100%;
