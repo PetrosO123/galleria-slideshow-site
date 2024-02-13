@@ -7,6 +7,7 @@
 }
 .App{
   padding: 0 5rem;
+  height: 100vh;
 }
 header{
   display: flex;
@@ -35,7 +36,6 @@ hr{
   height: 1px;
   margin-bottom: 2.3rem;
 }
-
 .card{
 
   cursor: pointer;
@@ -43,6 +43,15 @@ hr{
 }
 .masonry{
   columns: 4;
+  /* animation: scroll 40s linear infinite; */
+}
+@keyframes scroll{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
 }
 
 .masonry > *{
@@ -72,11 +81,11 @@ hr{
 }
 .cardName{
   padding-bottom: 0.5rem;
-  font-size: 1.75rem;
+  font-size: 1.75em;
   font-weight: 700;
 }
 .cardArtist{
-  font-size: 0.8125rem;
+  font-size: 0.8125em;
   color: #E5E5E5
 }
 
@@ -92,3 +101,4 @@ hr{
   );
   z-index: 2;
 }
+
