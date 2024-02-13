@@ -9,7 +9,7 @@ function App() {
   let navigate = useNavigate();
   const [entered, setEntered] = useState(null);
   const handleClick = () => {
-    navigate("/galleria-slideshow-site");
+    navigate("/");
   };
   const handleSlideshow = () => {
     setEntered(0);
@@ -31,7 +31,7 @@ function App() {
       <hr />
       <Routes>
         <Route
-          path="/galleria-slideshow-site"
+          path="/"
           element={
             <Masonry entered={entered} setEntered={setEntered} data={data} />
           }
