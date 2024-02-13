@@ -3,7 +3,7 @@ import Masonry from "./Masonry";
 import CardPage from "./CardPage";
 import data from "./data.json";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 function App() {
   let navigate = useNavigate();

@@ -1,19 +1,19 @@
 import "./CardPage.css";
-
+import { useState } from "react";
 function CardPage({ data, entered, setEntered }) {
+  console.log("entered: ", entered);
+  console.log("data.length: ", data.length);
+  const [progress, setProgress] = useState(((entered + 1) / data.length) * 100);
+  console.log("progress: ", progress);
   const handleNext = () => {
-    if (entered === data.length - 1) {
-      setEntered(0);
-      return;
-    }
-    setEntered(entered + 1);
+    const newEntered = entered === data.length - 1 ? 0 : entered + 1;
+    setEntered(newEntered);
+    setProgress(((newEntered + 1) / data.length) * 100);
   };
   const handlePrev = () => {
-    if (entered === 0) {
-      setEntered(data.length - 1);
-      return;
-    }
-    setEntered(entered - 1);
+    const newEntered = entered === 0 ? data.length - 1 : entered - 1;
+    setEntered(newEntered);
+    setProgress(((newEntered + 1) / data.length) * 100);
   };
   return (
     <div className="wrapper-cardPage">
@@ -42,29 +42,33 @@ function CardPage({ data, entered, setEntered }) {
           <div className="rightNumber">{data[entered].year}</div>
         </div>
       </div>
-      <hr className="bottom" />
       <footer>
-        <div className="work-artist-footer">
-          <div className="footer-cardPageTitle">{data[entered].name}</div>
-          <div className="footer-cardPageSubtitle">
-            {data[entered].artist.name}
-          </div>
+        <div className="bottom">
+          <div className="progress" style={{ width: `${progress}%` }}></div>
         </div>
-        <div className="navigation">
-          <img
-            src={`${
-              process.env.PUBLIC_URL
-            }/${`assets/shared/icon-back-button.svg`}`}
-            alt="left arrow"
-            onClick={handlePrev}
-          />
-          <img
-            src={`${
-              process.env.PUBLIC_URL
-            }/${`assets/shared/icon-next-button.svg`}`}
-            alt="right arrow"
-            onClick={handleNext}
-          />
+        <div className="footerWrapper">
+          <div className="work-artist-footer">
+            <div className="footer-cardPageTitle">{data[entered].name}</div>
+            <div className="footer-cardPageSubtitle">
+              {data[entered].artist.name}
+            </div>
+          </div>
+          <div className="navigation">
+            <img
+              src={`${
+                process.env.PUBLIC_URL
+              }/${`assets/shared/icon-back-button.svg`}`}
+              alt="left arrow"
+              onClick={handlePrev}
+            />
+            <img
+              src={`${
+                process.env.PUBLIC_URL
+              }/${`assets/shared/icon-next-button.svg`}`}
+              alt="right arrow"
+              onClick={handleNext}
+            />
+          </div>
         </div>
       </footer>
     </div>
