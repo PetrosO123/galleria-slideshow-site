@@ -82,6 +82,7 @@ hr{
   left: 2rem;
   bottom: 2rem;
   z-index: 3;
+  padding-right: 2rem;
 }
 .cardName{
   padding-bottom: 0.5rem;
