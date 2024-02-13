@@ -35,7 +35,13 @@ function App() {
         <Route
           path="/"
           element={
-            <Masonry entered={entered} setEntered={setEntered} data={data} />
+            <Masonry
+              entered={entered}
+              setEntered={setEntered}
+              data={data}
+              progress={progress}
+              setProgress={setProgress}
+            />
           }
         ></Route>
         <Route

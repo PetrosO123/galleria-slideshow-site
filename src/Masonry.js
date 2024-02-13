@@ -3,7 +3,7 @@ import data from "./data.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Masonry({ entered, setEntered, data }) {
+function Masonry({ entered, setEntered, data, progress, setProgress }) {
   console.log("data: ", data);
   let navigate = useNavigate();
   const handleEnter = (i) => {
@@ -13,6 +13,7 @@ function Masonry({ entered, setEntered, data }) {
     setEntered(null);
   };
   const handleClick = () => {
+    setProgress(((entered + 1) / data.length) * 100);
     navigate("/card");
   };
   return (
