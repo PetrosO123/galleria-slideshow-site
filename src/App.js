@@ -8,11 +8,13 @@ import { useNavigate } from "react-router-dom";
 function App() {
   let navigate = useNavigate();
   const [entered, setEntered] = useState(null);
+  const [progress, setProgress] = useState(((entered + 1) / data.length) * 100);
   const handleClick = () => {
     navigate("/");
   };
   const handleSlideshow = () => {
     setEntered(0);
+    setProgress((1 / data.length) * 100);
     navigate("/card");
   };
   return (
@@ -39,7 +41,13 @@ function App() {
         <Route
           path="/card"
           element={
-            <CardPage entered={entered} setEntered={setEntered} data={data} />
+            <CardPage
+              entered={entered}
+              setEntered={setEntered}
+              data={data}
+              progress={progress}
+              setProgress={setProgress}
+            />
           }
         ></Route>
       </Routes>

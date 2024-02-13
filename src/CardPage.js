@@ -1,9 +1,9 @@
 import "./CardPage.css";
 import { useState } from "react";
-function CardPage({ data, entered, setEntered }) {
+function CardPage({ data, entered, setEntered, progress, setProgress }) {
   console.log("entered: ", entered);
   console.log("data.length: ", data.length);
-  const [progress, setProgress] = useState(((entered + 1) / data.length) * 100);
+
   console.log("progress: ", progress);
   const handleNext = () => {
     const newEntered = entered === data.length - 1 ? 0 : entered + 1;
