@@ -41,7 +41,7 @@
     font-size: 1rem;
     letter-spacing: 0.1875rem;
     font-weight: 700;
-    animation: fade-in 0.5s; 
+    animation: fade-in 0.5s;
 }
 .close:hover{
     text-decoration: underline;
@@ -97,7 +97,7 @@ footer{
     height: 2.5rem;
     position: absolute;
     bottom: 1rem;
-    left: 4rem;
+    left: 1rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -240,6 +240,9 @@ footer{
 
 
 @media (max-width: 1200px) {
+    .close{
+        top: 1.75rem
+    }
     .App{
         padding: 0 1rem;
     }
@@ -275,6 +278,9 @@ footer{
     }
 }
 @media (max-width: 700px){
+    .close{
+        top: 1rem
+    }
     .cardName{
       font-size: 1.4rem;
     }
@@ -365,5 +371,8 @@ footer{
     }
     .pageRight, .pageLeft {
         width: auto;
+    }
+    .modalBtn{
+        left: 4rem;
     }
 }
