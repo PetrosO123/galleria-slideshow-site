@@ -48,16 +48,6 @@ hr{
 }
 
 
-
-@keyframes scroll{
-  0%{
-    transform: translateY(0);
-  }
-  100%{
-    transform: translateY(-100%);
-  }
-}
-
 .masonry > *{
   margin-bottom: 2rem;
   break-inside: avoid;
@@ -129,7 +119,7 @@ hr{
     column-count: 2;
   }
   .cardName{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .cardArtist{
     font-size: 0.65rem;
@@ -141,7 +131,7 @@ hr{
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1200px) {
   .masonry {
     column-count: 4;
   }
