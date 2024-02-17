@@ -16,17 +16,9 @@ function CardPage({ data, entered, setEntered, progress, setProgress }) {
     setProgress(((newEntered + 1) / data.length) * 100);
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [modalImage, setModalImage] = useState("");
-
-  // const openModalWithImage = (imageUrl) => {
-  //   console.log("modal open!");
-  //   console.log("imageURL: ", imageUrl);
-  //   setModalImage(`${process.env.PUBLIC_URL}/${imageUrl}`);
-  // };
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    // openModalWithImage(`${data[entered].images.hero.large}`);
   };
   return entered == null ? (
     <div>Loading...</div>
