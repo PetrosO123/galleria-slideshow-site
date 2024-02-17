@@ -288,10 +288,7 @@ footer{
     .App{
         padding: 0 0 0 1rem;
     }
-    .App>hr{
-    }
     footer{
-        /* padding: 0 1rem; */
         display: none;
         width: 90%;
     }
@@ -299,7 +296,7 @@ footer{
         left: 1rem;
         width: 4rem;
         height: 4rem;
-        bottom: -5rem;
+        bottom: 0rem;
     }
 
     .pageRight{
@@ -319,7 +316,7 @@ footer{
         top: 1rem;
     }
     .work-artist{
-        bottom: 0;
+        bottom: 5rem;
         left: 0;
         top: auto;
         right: auto;
@@ -342,4 +339,10 @@ footer{
         padding: 0.5rem 0;
         width: 100%
     } 
+    .pageLeft{
+        align-self: start;
+    }
+    .pageRight{
+        align-self: center;
+    }
 }
