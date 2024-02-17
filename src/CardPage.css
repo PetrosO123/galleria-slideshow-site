@@ -258,7 +258,7 @@ footer{
     }
     .artDescription{
         padding: 4rem 0 3rem 0;
-        width: 900%;
+        /* width: 90%; */
         display: grid;
         place-content: center;
         font-size: 1rem;
@@ -310,8 +310,7 @@ footer{
         font-size: 7rem;
     }
     .artDescription{
-        margin: 3rem 0;
-        width: 90%;
+        margin: 5rem 0;
         font-size: 0.875rem;
     }
     .modalBtn{
