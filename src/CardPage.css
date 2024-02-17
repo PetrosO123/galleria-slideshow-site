@@ -1,7 +1,7 @@
 .wrapper-cardPage{
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     justify-content: center;
 
 }
@@ -58,6 +58,7 @@
     height: 38rem;
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 
 
@@ -89,6 +90,7 @@ footer{
 }
 .art{
     width: 33rem;
+    flex-shrink: 1;
 }
 .modalBtn{
     width: 9.5rem;
@@ -277,23 +279,27 @@ footer{
     } */
 }
 @media (max-width: 760px){
-    header{
-        width: auto;
+     header{
+        width: 90%;
     }
     .title{
         font-size: 1rem;
     }
     .App{
-        padding: 0 1rem;
+        padding: 0 0 0 1rem;
+    }
+    .App>hr{
     }
     footer{
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
+        display: none;
+        width: 90%;
     }
     .artist{
         left: 1rem;
         width: 4rem;
         height: 4rem;
-        bottom: -2rem;
+        bottom: -5rem;
     }
 
     .pageRight{
@@ -305,6 +311,7 @@ footer{
         font-size: 7rem;
     }
     .artDescription{
+        margin: 3rem 0;
         width: 90%;
         font-size: 0.875rem;
     }
@@ -316,10 +323,10 @@ footer{
         left: 0;
         top: auto;
         right: auto;
-        /* transform: translateY(50%) */
+        transform: translateY(50%);
         max-width: 16rem;
         padding-right: 0.5rem;
-        padding-left:0.5rem
+        padding-left:0.5rem;
     }
     .cardPageTitle{
         font-size: 2rem;
@@ -332,9 +339,7 @@ footer{
         position: relative;
     }
     .artDescription{
-        /* text-align: center; */
         padding: 0.5rem 0;
         width: 100%
-    }
-    
+    } 
 }
