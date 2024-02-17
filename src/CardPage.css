@@ -285,9 +285,9 @@ footer{
     .title{
         font-size: 1rem;
     }
-    .App{
+    /* .App{
         padding: 0 0 0 1rem;
-    }
+    } */
     footer{
         display: none;
         width: 90%;
