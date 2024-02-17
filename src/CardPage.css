@@ -97,7 +97,7 @@ footer{
     height: 2.5rem;
     position: absolute;
     bottom: 1rem;
-    left: 1rem;
+    left: 4rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -267,9 +267,6 @@ footer{
         place-content: center;
         font-size: 1rem;
     }
-    .pageRight{
-        width: 70%;
-    }
     .cardPageTitle{
         font-size: 3rem;
     }
@@ -289,6 +286,10 @@ footer{
     }
      header{
         width: 90%;
+        margin-left: 2.5rem;
+    }
+    .App>hr{
+        margin-left: 2.5rem;
     }
     .title{
         font-size: 1rem;
@@ -298,24 +299,24 @@ footer{
         width: 90%;
     }
     .artist{
-        left: 1rem;
+        left: 3rem;
         width: 4rem;
         height: 4rem;
-        bottom: -1rem;
+        bottom: 0rem;
     }
     .midsection{
-        gap: 2rem;
+        gap: 0rem;
     }
     .pageRight{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 60rem;
     }
     .rightNumber{
         font-size: 7rem;
     }
     .artDescription{
-        /* margin: 3rem 0; */
         font-size: 0.875rem;
         padding-top: 3rem;
     }
@@ -324,11 +325,12 @@ footer{
     }
     .work-artist{
         bottom: 5rem;
-        left: 0;
+        left: 2rem;
         top: auto;
         right: auto;
         transform: translateY(50%);
         max-width: 16rem;
+        padding-right: 0.5rem;
     }
     .cardPageTitle{
         font-size: 2rem;
@@ -336,22 +338,32 @@ footer{
     .art img{
         width: 80%;
         height: 80%;
+        object-fit: contain;
     }
     .pageLeft{
         position: relative;
     }
     .artDescription{
         padding-bottom: 4rem;
-        margin: 0;
+        /* margin: 0; */
         width: 100%;
+        /* margin-left: 8rem;
+        margin-top: 2rem; */
+        align-self: center;
+        margin-left: 3rem;
+        margin-top: 1rem;
     } 
     .pageLeft{
         align-self: start;
     }
     .pageRight{
         align-self: center;
+        width: 100%;
     }
     .slideshow{
         display: none;
+    }
+    .pageRight, .pageLeft {
+        width: auto;
     }
 }
