@@ -227,7 +227,8 @@ footer{
 .navigation{
     display: flex;
     gap: 2.56rem;
-    padding-right: 2.5rem;
+    padding-right: 1.1rem;
+    display: absolute;
 }
 .navigation>*{
     cursor: pointer;
