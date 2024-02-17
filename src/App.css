@@ -128,6 +128,12 @@ hr{
   .masonry {
     column-count: 2;
   }
+  .cardName{
+    font-size: 1.6rem;
+  }
+  .cardArtist{
+    font-size: 0.65rem;
+  }
 }
 @media (min-width: 1000px) {
   .masonry {
