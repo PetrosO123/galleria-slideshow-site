@@ -282,6 +282,12 @@ footer{
     } */
 }
 @media (max-width: 700px){
+    .cardName{
+      font-size: 1.4rem;
+    }
+    .cardArtist{
+      font-size: 0.65rem;
+    }
     .App{
         padding: 0 1rem;
     }
@@ -349,5 +355,8 @@ footer{
     }
     .pageRight{
         align-self: center;
+    }
+    .slideshow{
+        display: none;
     }
 }
