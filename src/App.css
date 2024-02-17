@@ -20,12 +20,10 @@ header{
   cursor: pointer;
 }
 .title{
-  /* padding: 2rem 0 2rem 0; */
   font-size: 2rem;
   font-weight: 900;
 }
 .slideshow{
-  /* padding: 2rem 5rem 2rem 0; */
   font-size: 0.85rem;
   cursor: pointer;
   color: #7d7d7d;
@@ -46,9 +44,31 @@ hr{
   margin: 0 auto;
 }
 .masonry{
-  columns: 4;
-  /* animation: scroll 40s linear infinite; */
+  columns: 2;
 }
+
+@media (min-width: 400px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+@media (min-width: 700px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media (min-width: 1000px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1300px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
 @keyframes scroll{
   0%{
     transform: translateY(0);
@@ -72,6 +92,16 @@ hr{
 .card{
   position: relative;
   height: 100%;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -83,9 +113,10 @@ hr{
   bottom: 2rem;
   z-index: 3;
   padding-right: 2rem;
+  animation: fade-in 0.35s ease-in-out;
 }
 .cardName{
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
   font-size: 1.75em;
   font-weight: 700;
 }
